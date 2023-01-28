@@ -105,7 +105,20 @@ int main()
     empleados.push_back(vendedor6);
 
     //secretarios
-
+    Secretario* secretario1 = new Secretario("SJavier","Irigoyen Matos", "1234534","av.dsa 324", "3234532", 1100,2,3,"313443524");
+    Secretario* secretario2 = new Secretario("SDaniel", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    Secretario* secretario3 = new Secretario("SFrancisco", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    Secretario* secretario4 = new Secretario("SShirley", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    Secretario* secretario5 = new Secretario("SLorena", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    Secretario* secretario6 = new Secretario("SAndre", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    Secretario* secretario7 = new Secretario("SPier", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    Secretario* secretario8 = new Secretario("SVictor", "qw we", "1234534", "av.dsa 324", "3234532", 1100, 2, 3, "313443524");
+    empleados.push_back(secretario1);
+    empleados.push_back(secretario2);
+    empleados.push_back(secretario3);
+    empleados.push_back(secretario4);
+    empleados.push_back(secretario5);
+    empleados.push_back(secretario6);
     //jefe de zona
 
 

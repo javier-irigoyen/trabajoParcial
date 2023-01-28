@@ -1,5 +1,5 @@
 #include "Vendedor.h"
-
+#include <vector>
 //Vendedor::Vendedor() : Empleado() {	
 //}
 Vendedor::Vendedor(string nombre, string apellidos,
@@ -9,7 +9,7 @@ Vendedor::Vendedor(string nombre, string apellidos,
 	int areaVenta, double porcentajeComisiones) : Empleado(nombre, apellidos,dni,
 		direccion, telefono, aniosLaboral, salario) {
 	this->telefonoMovil = telefonoMovil;
-	this->bonificacion = 10;
+	this->bonoAnual = 10;
 	this->numeroClientes = 0;
 	this->clientes = nullptr;
 	this->carro = carro;
@@ -68,7 +68,28 @@ void Vendedor::eliminarCliente(string dni){
 	this->clientes = v_aux; //return Aux;
 }
 void Vendedor::cambiarCoche(string matricula) {
-
+	//vector<Coche*> coches_aux;
+	//int i = 0;
+	////copiar elementos a la izquierda del cliente a eliminar
+	//for (; i < coches_aux.size(); i++) {
+	//	if (carros[i]->getDni() == dni)
+	//		break;
+	//	if (i == this->numeroClientes - 1) {//no se encontro al cliente
+	//		delete[] v_aux;
+	//		cout << "Error: No se encontro al cliente del vendedor con el DNI ingresado" << endl;
+	//		return;
+	//	}
+	//	v_aux[i] = clientes[i];
+	//}
+	////copiar elementos a la derecha
+	//for (; i < this->numeroClientes - 1; i++) {
+	//	v_aux[i] = clientes[i + 1];
+	//}
+	//if (this->clientes != nullptr) {
+	//	delete[] this->clientes;
+	//}
+	//this->numeroClientes--; // El tama o del arreglo se resta en 1 
+	//this->clientes = v_aux; //return Aux;
 }
 void Vendedor::imprimir() {
 	cout << endl;
@@ -89,8 +110,8 @@ void Vendedor::imprimir() {
 	case NINGUNA: cout << "Ninguna" << endl;
 		break;
 	};
-	cout << "Auto:" << endl;
-	cout << "\tMatricula:\t\t" << this->carro->getMatricula() << endl;
-	cout << "\tMarca:\t\t\t" << this->carro->getMarca() << endl;
-	cout << "\tModelo:\t\t\t" << this->carro->getModelo() << endl;
+	cout << " Auto:" << endl;
+	cout << "  Matricula:\t\t" << this->carro->getMatricula() << endl;
+	cout << "  Marca:\t\t" << this->carro->getMarca() << endl;
+	cout << "  Modelo:\t\t" << this->carro->getModelo() << endl;
 }

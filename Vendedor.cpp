@@ -5,13 +5,14 @@
 Vendedor::Vendedor(string nombre, string apellidos,
 	string dni, string direccion,
 	string telefono, double salario, int aniosLaboral,
-	Coche carro, string telefonoMovil,
+	Coche* carro, string telefonoMovil,
 	int areaVenta, double porcentajeComisiones) : Empleado(nombre, apellidos,dni,
 		direccion, telefono, aniosLaboral, salario) {
 	this->telefonoMovil = telefonoMovil;
 	this->bonificacion = 10;
 	this->numeroClientes = 0;
 	this->clientes = nullptr;
+	//this->carro = nullptr;
 	if (areaVenta == Vendedor::DIRECTOR_GERENCIAL ||
 		areaVenta == Vendedor::GERENTE_COMERCIAL ||
 		areaVenta == Vendedor::VENDEDOR ||
@@ -72,6 +73,7 @@ void Vendedor::imprimir() {
 	cout << "=================" << endl;
 	Empleado::imprimir();
 	cout << "Telefono Movil:\t" << this->telefonoMovil << endl;
+	cout << "Area de Venta:\t";
 	switch (this->areaVenta) {
 	case DIRECTOR_GERENCIAL: cout << "Director Gerencial" << endl;
 		break;
@@ -83,6 +85,9 @@ void Vendedor::imprimir() {
 		break;
 	case NINGUNA: cout << "Ninguna" << endl;
 		break;
-	}
-	
+	};
+	cout << "Auto:" << endl;
+	cout << "Matricula:\t" << this->carro->getMatricula() << endl;
+	cout << "Marca:\t" << carro->getMarca() << endl;
+	cout << "Modelo:\t" << carro->getModelo() << endl;
 }

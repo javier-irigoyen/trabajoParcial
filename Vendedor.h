@@ -24,7 +24,7 @@ public:
 	Vendedor(string nombre, string apellidos,
 		string dni, string direccion,
 		string telefono, double salario, int aniosLaboral,
-		Coche carro, string telefonoMovil,
+		Coche* carro, string telefonoMovil,
 		int areaVenta, double porcentajeComisiones);
 	~Vendedor();
 	void agregarCliente(Cliente* aCliente);

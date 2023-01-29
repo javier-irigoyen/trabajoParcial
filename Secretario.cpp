@@ -4,13 +4,13 @@ Secretario::Secretario() {
 	this->puesto = Secretario::NINGUNA;
 	this->num_fax = "";
 }
-Secretario::Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario,
+Secretario::Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
 	int puesto, string num_fax) : Empleado(nombre, apellidos, dni,
-		direccion, telefono, aniosLaboral, salario)  {
+		direccion, telefono, salario, tipo )  {
 
 	this->puesto = puesto;
 	this->num_fax = num_fax;
-	this->bonoAnual = 5;
+
 	if (puesto == Secretario::DIRECCION || puesto == Secretario::ALTA_DIRECCION
 		|| puesto == Secretario::GERENCIA) {
 		this->puesto = puesto;

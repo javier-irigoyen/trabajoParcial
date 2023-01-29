@@ -2,19 +2,19 @@
 #include <vector>
 //Vendedor::Vendedor() : Empleado() {	
 //}
-Vendedor::Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario,
+Vendedor::Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
 	Coche* carro, string telefonoMovil,
 	int areaVenta, double porcentajeComisiones) : Empleado(nombre, apellidos,dni,
-		direccion, telefono, aniosLaboral, salario) {
+		direccion, telefono, salario , tipo) {
+
+	this->porcentajeComisiones = porcentajeComisiones;
 	this->telefonoMovil = telefonoMovil;
-	this->bonoAnual = 10;
-	this->numeroClientes = 0;
-	this->clientes = nullptr;
 	this->carro = carro;
 	if (areaVenta == Vendedor::DIRECTOR_GERENCIAL ||
 		areaVenta == Vendedor::GERENTE_COMERCIAL ||
 		areaVenta == Vendedor::VENDEDOR ||
-		areaVenta == Vendedor::ASISTENTE_COMERCIAL) {
+		areaVenta == Vendedor::ASISTENTE_COMERCIAL ||
+		areaVenta == Vendedor::EJECUTIVO_COMERCIAL) {
 		this->areaVenta = areaVenta;
 	}
 	else {
@@ -105,9 +105,13 @@ void Vendedor::imprimir() {
 		break;
 	case ASISTENTE_COMERCIAL: cout << "Asistente Comercial" << endl;
 		break;
+	case EJECUTIVO_COMERCIAL: cout << "Ejecutivo Comercial" << endl;
+		break;
 	case NINGUNA: cout << "Ninguna" << endl;
 		break;
 	};
+	cout << "Su Porcentaje De Comisiones: \t%" << this->porcentajeComisiones << endl;
+
 	cout << "Auto:" << endl;
 	cout << "Matricula:                   \t" << this->carro->getMatricula() << endl;
 	cout << "Marca:                       \t" << this->carro->getMarca() << endl;

@@ -14,7 +14,7 @@ public:
 	static const int NINGUNA = 0;
 
 	Secretario();
-	Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario,
+	Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
 		int puesto, string num_fax);
 	~Secretario();
 

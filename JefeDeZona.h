@@ -15,7 +15,7 @@ public:
 	JefeDeZona();
 	JefeDeZona(string nombre, string apellidos,
 		string dni, string direccion,
-		string telefono, double salario, int aniosLaboral,
+		string telefono, double salario, char tipo,
 		bool despacho, Secretario* secretario, Coche* carro, Vendedor** vendedores);
 	~JefeDeZona();
 

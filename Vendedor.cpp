@@ -12,7 +12,7 @@ Vendedor::Vendedor(string nombre, string apellidos,
 	this->bonificacion = 10;
 	this->numeroClientes = 0;
 	this->clientes = nullptr;
-	//this->carro = nullptr;
+	this->carro = carro;
 	if (areaVenta == Vendedor::DIRECTOR_GERENCIAL ||
 		areaVenta == Vendedor::GERENTE_COMERCIAL ||
 		areaVenta == Vendedor::VENDEDOR ||
@@ -27,6 +27,9 @@ Vendedor::Vendedor(string nombre, string apellidos,
 Vendedor::~Vendedor() {
 	if (this->clientes != nullptr) {
 		delete[] this->clientes;
+	}
+	if (this->carro != nullptr) {
+		delete[] this->carro;
 	}
 }
 void Vendedor::agregarCliente(Cliente* aCliente){
@@ -43,7 +46,7 @@ void Vendedor::agregarCliente(Cliente* aCliente){
 void Vendedor::eliminarCliente(string dni){
 	Cliente** v_aux = new Cliente * [this->numeroClientes - 1];
 	int i = 0;
-	//copiar elementos a la izquierda del porveedor a eliminar
+	//copiar elementos a la izquierda del cliente a eliminar
 	for (; i < this->numeroClientes; i++) {
 		if (clientes[i]->getDni() == dni)
 			break;
@@ -70,10 +73,10 @@ void Vendedor::cambiarCoche(string matricula) {
 void Vendedor::imprimir() {
 	cout << endl;
 	cout << "Vendedor" << endl;
-	cout << "=================" << endl;
+	cout << "============================================" << endl;
 	Empleado::imprimir();
-	cout << "Telefono Movil:\t" << this->telefonoMovil << endl;
-	cout << "Area de Venta:\t";
+	cout << "Telefono Movil:\t\t" << this->telefonoMovil << endl;
+	cout << "Area de Venta:\t\t";
 	switch (this->areaVenta) {
 	case DIRECTOR_GERENCIAL: cout << "Director Gerencial" << endl;
 		break;
@@ -87,7 +90,7 @@ void Vendedor::imprimir() {
 		break;
 	};
 	cout << "Auto:" << endl;
-	cout << "Matricula:\t" << this->carro->getMatricula() << endl;
-	cout << "Marca:\t" << carro->getMarca() << endl;
-	cout << "Modelo:\t" << carro->getModelo() << endl;
+	cout << "\tMatricula:\t\t" << this->carro->getMatricula() << endl;
+	cout << "\tMarca:\t\t\t" << this->carro->getMarca() << endl;
+	cout << "\tModelo:\t\t\t" << this->carro->getModelo() << endl;
 }

@@ -20,7 +20,7 @@ public:
 	static const int ASISTENTE_COMERCIAL = 1;
 	static const int NINGUNA = 0;
 
-	Vendedor();
+	//Vendedor();
 	Vendedor(string nombre, string apellidos,
 		string dni, string direccion,
 		string telefono, double salario, int aniosLaboral,

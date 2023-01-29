@@ -4,11 +4,12 @@ class Empleado : public Persona
 {
 protected:
 	double salario;
+	double nSalario;
 	double bonificacion;
 	int aniosLaboral;
 public:
 	//Empleado();
 	Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario);
-	void calcularSalario(double salario, double bonificacion, int aniosLaboral);
+	double calcularSalario();
 	virtual void imprimir();
 };

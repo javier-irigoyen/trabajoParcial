@@ -22,15 +22,16 @@ Empleado::Empleado(string nombre, string apellidos, string dni, string direccion
 	}
 }
 
-void Empleado::calcularSalario(double salario, double bonificacion, int aniosLaboral) {
-	this->salario = salario * pow(1 + bonificacion / 100, aniosLaboral);
+double Empleado::calcularSalario() {
+	return nSalario = this->salario * pow(1 + this->bonificacion / 100, this->aniosLaboral);
 }
 void Empleado::imprimir(){
 	cout << "Nombre:\t\t\t" << this->nombre << endl;
-	cout << "Apellidos:\t" << this->apellidos << endl;
-	cout << "DNI:\t" << this->dni << endl;
-	cout << "Direccion:\t" << this->direccion << endl;
-	cout << "Telefono:\t" << this->telefono << endl;
-	cout << "Anios Laboral:\t" << this->aniosLaboral << endl;
-	cout << "Salario:\t" << this->salario << endl;
+	cout << "Apellidos:\t\t" << this->apellidos << endl;
+	cout << "DNI:\t\t\t" << this->dni << endl;
+	cout << "Direccion:\t\t" << this->direccion << endl;
+	cout << "Telefono:\t\t" << this->telefono << endl;
+	cout << "Anios Laboral:\t\t" << this->aniosLaboral << endl;
+	cout << "Salario Inicial:\t" << this->salario << endl;
+	cout << "Salario Actual:\t\t" << this->calcularSalario() << endl;
 }

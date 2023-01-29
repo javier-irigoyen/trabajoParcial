@@ -1,7 +1,7 @@
 #include "Empleado.h"
 #include <math.h>
-//Empleado::Empleado() : Persona(){
-//}
+Empleado::Empleado() : Persona(){
+}
 Empleado::Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario)
 	: Persona(nombre, apellidos, dni, direccion, telefono) {
 	if (aniosLaboral >= 0 && aniosLaboral <= 70)
@@ -26,12 +26,12 @@ double Empleado::calcularSalario() {
 	return nSalario = this->salario * pow(1 + this->bonoAnual / 100, this->aniosLaboral);
 }
 void Empleado::imprimir(){
-	cout << "Nombre:\t\t\t" << this->nombre << endl;
-	cout << "Apellidos:\t\t" << this->apellidos << endl;
-	cout << "DNI:\t\t\t" << this->dni << endl;
-	cout << "Direccion:\t\t" << this->direccion << endl;
-	cout << "Telefono:\t\t" << this->telefono << endl;
-	cout << "Anios Laboral:\t\t" << this->aniosLaboral << endl;
-	cout << "Salario Inicial:\t" << this->salario << endl;
-	cout << "Salario Actual:\t\t" << this->calcularSalario() << endl;
+	cout << "Nombre(s):                   \t" << this->nombre << endl;
+	cout << "Apellido(s):                 \t" << this->apellidos << endl;
+	cout << "DNI:                         \t" << this->dni << endl;
+	cout << "Direccion:                   \t" << this->direccion << endl;
+	cout << "Telefono:                    \t" << this->telefono << endl;
+	cout << "Anios Laboral:               \t" << this->aniosLaboral << endl;
+	cout << "Salario Inicial:             \t" << this->salario << endl;
+	cout << "Salario Actual:              \t" << this->calcularSalario() << endl;
 }

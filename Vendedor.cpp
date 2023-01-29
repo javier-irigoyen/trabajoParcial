@@ -2,9 +2,7 @@
 #include <vector>
 //Vendedor::Vendedor() : Empleado() {	
 //}
-Vendedor::Vendedor(string nombre, string apellidos,
-	string dni, string direccion,
-	string telefono, double salario, int aniosLaboral,
+Vendedor::Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario,
 	Coche* carro, string telefonoMovil,
 	int areaVenta, double porcentajeComisiones) : Empleado(nombre, apellidos,dni,
 		direccion, telefono, aniosLaboral, salario) {
@@ -94,10 +92,10 @@ void Vendedor::cambiarCoche(string matricula) {
 void Vendedor::imprimir() {
 	cout << endl;
 	cout << "Vendedor" << endl;
-	cout << "============================================" << endl;
+	cout << "===========================================================" << endl;
 	Empleado::imprimir();
-	cout << "Telefono Movil:\t\t" << this->telefonoMovil << endl;
-	cout << "Area de Venta:\t\t";
+	cout << "Telefono Movil:              \t" << this->telefonoMovil << endl;
+	cout << "Area de Venta:               \t";
 	switch (this->areaVenta) {
 	case DIRECTOR_GERENCIAL: cout << "Director Gerencial" << endl;
 		break;
@@ -110,8 +108,8 @@ void Vendedor::imprimir() {
 	case NINGUNA: cout << "Ninguna" << endl;
 		break;
 	};
-	cout << " Auto:" << endl;
-	cout << "  Matricula:\t\t" << this->carro->getMatricula() << endl;
-	cout << "  Marca:\t\t" << this->carro->getMarca() << endl;
-	cout << "  Modelo:\t\t" << this->carro->getModelo() << endl;
+	cout << "Auto:" << endl;
+	cout << "Matricula:                   \t" << this->carro->getMatricula() << endl;
+	cout << "Marca:                       \t" << this->carro->getMarca() << endl;
+	cout << "Modelo:                      \t" << this->carro->getModelo() << endl;
 }

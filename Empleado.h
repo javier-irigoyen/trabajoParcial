@@ -12,7 +12,7 @@ public:
 	Empleado();
 	Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo);
 	~Empleado();
+	char getTipo();
 	virtual double calcularSalario();
 	virtual void imprimir();
-	
 };

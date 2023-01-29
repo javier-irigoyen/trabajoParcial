@@ -27,4 +27,3 @@ public:
 	string getDireccion();
 	string getTelefono();
 };
-

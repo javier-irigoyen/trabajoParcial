@@ -21,13 +21,13 @@ public:
 	static const int NINGUNA = 0;
 
 	//Vendedor();
-	Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono,double salario, char tipo,
+	Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
 		Coche* carro, string telefonoMovil,
 		int areaVenta, double porcentajeComisiones);
 	~Vendedor();
+	Coche* getCarro();
+	void cambiarCoche(Coche* carro);
 	void agregarCliente(Cliente* aCliente);
 	void eliminarCliente(string dni);
-	void cambiarCoche(string matricula);
 	void imprimir();
 };
-

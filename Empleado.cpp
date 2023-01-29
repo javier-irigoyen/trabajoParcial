@@ -1,9 +1,8 @@
 #include "Empleado.h"
-Empleado::Empleado() : Persona(){}
+Empleado::Empleado() : Persona() {}
 Empleado::~Empleado() {}
 Empleado::Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo)
 	: Persona(nombre, apellidos, dni, direccion, telefono) {
-	
 	if (salario >= 12000)
 	{
 		this->salario = salario;
@@ -21,9 +20,9 @@ Empleado::Empleado(string nombre, string apellidos, string dni, string direccion
 		this->tipo = tipo;
 	}
 }
+char Empleado::getTipo() { return this->tipo; }
 
 double Empleado::calcularSalario() {
-
 	double s = this->salario;
 	if (this->tipo == SECRETARIO)
 		return s *= 1.05;
@@ -33,7 +32,7 @@ double Empleado::calcularSalario() {
 		return s *= 1.2;
 }
 
-void Empleado::imprimir(){
+void Empleado::imprimir() {
 	cout << "Nombre(s):                   \t" << this->nombre << endl;
 	cout << "Apellido(s):                 \t" << this->apellidos << endl;
 	cout << "DNI:                         \t" << this->dni << endl;

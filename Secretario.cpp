@@ -6,8 +6,7 @@ Secretario::Secretario() {
 }
 Secretario::Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
 	int puesto, string num_fax) : Empleado(nombre, apellidos, dni,
-		direccion, telefono, salario, tipo )  {
-
+		direccion, telefono, salario, tipo) {
 	this->puesto = puesto;
 	this->num_fax = num_fax;
 
@@ -19,13 +18,12 @@ Secretario::Secretario(string nombre, string apellidos, string dni, string direc
 		cout << "Error: Puesto no valido. El puesto se establecera como NINGUNA." << endl;
 		this->puesto = Secretario::NINGUNA;
 	}
-
 }
-Secretario::~Secretario(){}
-int Secretario::getPuesto(){
+Secretario::~Secretario() {}
+int Secretario::getPuesto() {
 	return this->puesto;
 }
-string Secretario::getNum_fax(){
+string Secretario::getNum_fax() {
 	return this->num_fax;
 }
 void Secretario::imprimir() {

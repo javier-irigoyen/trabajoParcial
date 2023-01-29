@@ -203,6 +203,7 @@ int main()
             {
                 if (empleados[i]->getDni() == d)
                 {
+                    cout << "\nEliminado: " << empleados[i]->getNombre() <<" "<< empleados[i]->getApellidos()<<endl;
                     empleados.erase(empleados.begin() + i);
                 }
             }

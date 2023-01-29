@@ -9,7 +9,7 @@ Empleado::Empleado(string nombre, string apellidos, string dni, string direccion
 		this->aniosLaboral = aniosLaboral;
 	}
 	else {
-		cout << "Error: Los anios laborales ingresados no son validos. Se le asignara 0 anio laboral.";
+		cout << "Error: Los anios laborales ingresados no son validos. Se le asignara 0 anio laboral.\n";
 		this->aniosLaboral = 0;
 	}
 	if (salario >= 1000)
@@ -17,7 +17,7 @@ Empleado::Empleado(string nombre, string apellidos, string dni, string direccion
 		this->salario = salario;
 	}
 	else {
-		cout << "Error: El salario ingresado no es menor al sueldo minimo. Se le asignara el sueldo minimo (1000)";
+		cout << "Error: El salario ingresado no es menor al sueldo minimo. Se le asignara el sueldo minimo (1000)\n";
 		this->salario = 1000;
 	}
 }

@@ -300,11 +300,11 @@ void opercaciones() {
 						carro->mostrar();
 						cout << "\nIngrese la matricula del nuevo carro a asignar: " << endl;
 						cin >> m;
-						for (int i = 0; i < carros.size(); i++)
+						for (int j = 0; j < carros.size(); j++)
 						{
-							if (carros[i]->getMatricula() == m)
+							if (carros[j]->getMatricula() == m)
 							{
-								carro = carros[i];
+								carro = carros[j];
 								vendedores[i]->cambiarCoche(carro);
 							}
 						}
@@ -358,40 +358,40 @@ void opercaciones() {
 						}
 					}break;
 					case 4: {
-						cout << "Su Carro asignado es: " << endl;
+						cout << "\nSu Carro asignado es: " << endl;
 						carro = jefes[i]->getCarro();
 						carro->mostrar();
 						cout << "\nIngrese la matricula del nuevo Carro a asignar: " << endl;
 						string m;
 						cin >> m;
-						for (int i = 0; i < carros.size(); i++)
+						for (int j = 0; j < carros.size(); j++)
 						{
-							if (carros[i]->getMatricula() == m)
+							if (carros[j]->getMatricula() == m)
 							{
-								carro = carros[i];
-								jefes[i]->cambiarCarro(carros[i]);
+								carro = carros[j];
+								jefes[i]->cambiarCarro(carros[j]);
 							}
 						}
-						cout << "Su nuevo Carro es: " << endl;
+						cout << "\nSu nuevo Carro es: " << endl;
 						carro = jefes[i]->getCarro();
 						carro->mostrar();
 					}break;
 					case 5: {
-						cout << "Su Secretario asignado es:" << endl;
+						cout << "\nSu Secretario asignado es:" << endl;
 						secretario = jefes[i]->getSecretario();
 						secretario->imprimir();
 						cout << "\nIngrese el DNI de su nuevo Secretario a asignar: " << endl;
 						string m;
 						cin >> m;
-						for (int i = 0; i < secretarios.size(); i++)
+						for (int j = 0; j < secretarios.size(); j++)
 						{
-							if (secretarios[i]->getDni() == m)
+							if (secretarios[j]->getDni() == m)
 							{
-								secretario = secretarios[i];
+								secretario = secretarios[j];
 								jefes[i]->cambiarSecretario(secretario);
 							}
 						}
-						cout << "Su nuevo Secretario es: " << endl;
+						cout << "\nSu nuevo Secretario es: " << endl;
 						secretario = jefes[i]->getSecretario();
 						secretario->imprimir();
 					}

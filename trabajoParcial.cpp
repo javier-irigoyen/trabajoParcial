@@ -44,30 +44,30 @@ vector<Coche*> carros{ carro1 , carro2, carro3, carro4, carro5,
 carro6,carro7, carro8, carro9, carro10, carro11, carro12 };
 
 //Lista Secretarios
-Secretario* secretario1 = new Secretario("Daniel", "Villarreal", "7890123", "av.ttt 1111", "3234532", 20000, 'a', 2, "313443524");
-Secretario* secretario2 = new Secretario("Francisco Javier", "Chaney", "4571389", "av.gytyry 123", "3234532", 30000, 'a', 1, "313443524");
-Secretario* secretario3 = new Secretario("Shirley", "Quijote Nunes", "9478314", "jr.dsa 336", "3234532", 40000, 'a', 3, "313443524");
-Secretario* secretario4 = new Secretario("Lorena Jimenez", "Hooper", "8937234", "jr.dasd 222", "3234532", 50000, 'a', 1, "313443524");
-Secretario* secretario5 = new Secretario("Andre Pedro", "Whitehead", "8827314", "jr.dasd 233", "3234532", 60000, 'a', 1, "313443524");
-Secretario* secretario6 = new Secretario("Pier Burke", "Byrd", "8224414", "ca.rwesda 775", "3234532", 80000, 'a', 3, "313443524");
-Secretario* secretario7 = new Secretario("Victor Victorry", "Monroe", "5828344", "ca.yrtye 4234", "3234532", 70000, 'a', 2, "313443524");
+Secretario* secretario1 = new Secretario("Daniel", "Villarreal", "7890123", "av.ttt 1111", "3234532", 20000, 2, 'a', 2, "313443524");
+Secretario* secretario2 = new Secretario("Francisco Javier", "Chaney", "4571389", "av.gytyry 123", "3234532", 30000, 3, 'a', 1, "313443524");
+Secretario* secretario3 = new Secretario("Shirley", "Quijote Nunes", "9478314", "jr.dsa 336", "3234532", 40000, 4, 'a', 3, "313443524");
+Secretario* secretario4 = new Secretario("Lorena Jimenez", "Hooper", "8937234", "jr.dasd 222", "3234532", 50000, 3, 'a', 1, "313443524");
+Secretario* secretario5 = new Secretario("Andre Pedro", "Whitehead", "8827314", "jr.dasd 233", "3234532", 60000, 2, 'a', 1, "313443524");
+Secretario* secretario6 = new Secretario("Pier Burke", "Byrd", "8224414", "ca.rwesda 775", "3234532", 80000, 3, 'a', 3, "313443524");
+Secretario* secretario7 = new Secretario("Victor Victorry", "Monroe", "5828344", "ca.yrtye 4234", "3234532", 70000, 4, 'a', 2, "313443524");
 vector<Secretario*> secretarios{ secretario1 , secretario2, secretario3, secretario4, secretario5,
 secretario6,secretario7 };
 
 //Lista Vendedores
-Vendedor* vendedor1 = new Vendedor("Javier", "Irigoyen Matos", "4800271", "Av. Benavides 560", "4432345", 1232133, 'b', carro1, "993994620", 1, 5);
-Vendedor* vendedor2 = new Vendedor("Daniel", "Roth", "4356343", "Av. rq 525", "3456425", 123123.66, 'b', carro2, "993994621", 2, 4);
-Vendedor* vendedor3 = new Vendedor("Francisco", "Green", "5426843", "Av. gs 567", "4567424", 321312.66, 'b', carro3, "993994622", 3, 2);
-Vendedor* vendedor4 = new Vendedor("Shirley", "Frey", "3781954", "Av. hd 356", "1111111", 42069.69, 'b', carro4, "993994623", 4, 0);
-Vendedor* vendedor5 = new Vendedor("Lorena", "Cain", "7891056", "Av. sh 853", "2222222", 23213, 'b', carro5, "993994624", 1, 1);
-Vendedor* vendedor6 = new Vendedor("Abbie", "Monroe", "2415789", "Av. wr 145", "3333333", 23123, 'b', carro6, "993994625", 4, 2);
-Vendedor* vendedor7 = new Vendedor("Kierra ", "Austin", "1357903", "Av. ut 986", "4444444", 3123312, 'b', carro7, "993994626", 5, 3);
+Vendedor* vendedor1 = new Vendedor("Javier", "Irigoyen Matos", "4800271", "Av. Benavides 560", "4432345", 1200, 2, 'b', carro1, "993994620", 1, 5);
+Vendedor* vendedor2 = new Vendedor("Daniel", "Roth", "4356343", "Av. rq 525", "3456425", 1200, 2, 'b', carro2, "993994621", 2, 4);
+Vendedor* vendedor3 = new Vendedor("Francisco", "Green", "5426843", "Av. gs 567", "4567424", 1200, 2, 'b', carro3, "993994622", 3, 2);
+Vendedor* vendedor4 = new Vendedor("Shirley", "Frey", "3781954", "Av. hd 356", "1111111", 1200, 2, 'b', carro4, "993994623", 4, 0);
+Vendedor* vendedor5 = new Vendedor("Lorena", "Cain", "7891056", "Av. sh 853", "2222222", 1200, 2, 'b', carro5, "993994624", 1, 1);
+Vendedor* vendedor6 = new Vendedor("Abbie", "Monroe", "2415789", "Av. wr 145", "3333333", 1200, 2, 'b', carro6, "993994625", 4, 2);
+Vendedor* vendedor7 = new Vendedor("Kierra ", "Austin", "1357903", "Av. ut 986", "4444444", 1200, 2, 'b', carro7, "993994626", 5, 3);
 vector<Vendedor*> vendedores{ vendedor1 , vendedor2, vendedor3, vendedor4, vendedor5,
 vendedor6,vendedor7 };
 
 //Lista Jefes
-JefeDeZona* jefe1 = new JefeDeZona("Kristopher Pepito", "Nuñez Tejada", "1340455", "Calle Las Golondrinas 123", "44185141", 500000, 'c', true, secretario1, carro11, vendedor1);
-JefeDeZona* jefe2 = new JefeDeZona("Fletcher Thomas", "Atkinson Tejada", "2233505", "Calle Las Golondrinas 123", "44185141", 500000, 'c', true, secretario2, carro12, vendedor2);
+JefeDeZona* jefe1 = new JefeDeZona("Kristopher Pepito", "Nuñez Tejada", "1340455", "Calle Las Golondrinas 123", "44185141", 500000, 'c', 2, true, secretario1, carro11);
+JefeDeZona* jefe2 = new JefeDeZona("Fletcher Thomas", "Atkinson Tejada", "2233505", "Calle Las Golondrinas 123", "44185141", 500000, 'c', 2, true, secretario2, carro12);
 vector<JefeDeZona*> jefes{ jefe1 , jefe2, };
 
 void menu() {
@@ -121,8 +121,17 @@ Vendedor* leerVendedor() {
 	getline(cin >> ws, direccion);
 	cout << "Ingrese el Numero de Telefono del Vendedeor: ";
 	cin >> telefono;
-	cout << "Ingrese Salario Anual del Vendedor:\n";
-	cin >> salario;
+	do
+	{
+		cout << "Ingrese los anios laborales del Vendedor:";
+		cin >> aniosLaboral;
+	} while (!(aniosLaboral >= 0 && aniosLaboral <= 70));
+	do
+	{
+		cout << "Ingrese Salario Anual inicial del Vendedor:\n";
+		cin >> salario;
+	} while (!(salario >= 1000));
+
 	string m;
 	cout << "Listado de Carros:" << endl;
 	for (int i = 0; i < carros.size(); i++)
@@ -138,13 +147,24 @@ Vendedor* leerVendedor() {
 	}
 	cout << "Ingrese Telefono Movil del Vendedor:\n";
 	cin >> telefonoMovil;
+	do
+	{
 	cout << "Ingrese el Area de Venta del Vendedor:\n";
 	cout << "1. ASISTENTE COMERCIAL\t 2. VENDEDOR\t 3. EJECUTIVO COMERCIAL\t 4. GERENTE COMERCIAL\t 5. DIRECTOR GERENCIAL\n";
 	cin >> areaVenta;
+	} while (areaVenta != Vendedor::DIRECTOR_GERENCIAL &&
+		areaVenta != Vendedor::GERENTE_COMERCIAL &&
+		areaVenta != Vendedor::EJECUTIVO_COMERCIAL &&
+		areaVenta != Vendedor::VENDEDOR &&
+		areaVenta != Vendedor::ASISTENTE_COMERCIAL &&
+		areaVenta != Vendedor::NINGUNA);
+	do
+	{
 	cout << "Ingrese el Porcentaje de Comisiones del Vendedor:\n";
 	cin >> porcentajeComisiones;
+	} while (!(porcentajeComisiones >= 0 && porcentajeComisiones <= 100));
 
-	return new Vendedor(nombre, apellidos, dni, direccion, telefono, salario, tipo, carro, telefonoMovil,
+	return new Vendedor(nombre, apellidos, dni, direccion, telefono, salario, aniosLaboral, tipo, carro, telefonoMovil,
 		areaVenta, porcentajeComisiones);
 }
 Empleado* leerEmpleado() {
@@ -171,7 +191,7 @@ Empleado* leerEmpleado() {
 		cout << "Ingrese numero de FAX del Secretario:\n";
 		cin >> num_fax;
 
-		return new Secretario(nombre, apellidos, dni, direccion, telefono, salario, tipo, puesto, num_fax);
+		return new Secretario(nombre, apellidos, dni, direccion, telefono, salario, aniosLaboral, tipo, puesto, num_fax);
 	}
 	if (tipo == 'b') {
 		cout << "Ingrese Salario Anual del Vendedor:\n";
@@ -198,7 +218,7 @@ Empleado* leerEmpleado() {
 		cout << "Ingrese el Porcentaje de Comisiones del Vendedor:\n";
 		cin >> porcentajeComisiones;
 
-		return new Vendedor(nombre, apellidos, dni, direccion, telefono, salario, tipo, carro, telefonoMovil,
+		return new Vendedor(nombre, apellidos, dni, direccion, telefono, salario, aniosLaboral, tipo, carro, telefonoMovil,
 			areaVenta, porcentajeComisiones);
 	}
 	if (tipo == 'c') {
@@ -243,7 +263,7 @@ Empleado* leerEmpleado() {
 				vendedor = vendedores[i];
 			}
 		}
-		return new JefeDeZona(nombre, apellidos, dni, direccion, telefono, salario, tipo, despacho, secretario, carro, vendedor);
+		return new JefeDeZona(nombre, apellidos, dni, direccion, telefono, salario, tipo, aniosLaboral, despacho, secretario, carro);
 	}
 }
 

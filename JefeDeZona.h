@@ -10,13 +10,14 @@ private:
 	bool despacho;
 	Secretario* secretario;
 	Coche* carro;
-	Vendedor* vendedor;
+	Vendedor** vendedores;
+	int numeroVendedores;
 public:
 	JefeDeZona();
 	JefeDeZona(string nombre, string apellidos,
 		string dni, string direccion,
-		string telefono, double salario, char tipo,
-		bool despacho, Secretario* secretario, Coche* carro, Vendedor* vendedor);
+		string telefono, double salario, char tipo, int aniosLaboral,
+		bool despacho, Secretario* secretario, Coche* carro);
 	~JefeDeZona();
 	Coche* getCarro();
 	Secretario* getSecretario();

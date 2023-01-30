@@ -20,12 +20,16 @@ public:
 	static const int ASISTENTE_COMERCIAL = 1;
 	static const int NINGUNA = 0;
 
-	//Vendedor();
-	Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
+	Vendedor();
+	Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, int aniosLaboral, char tipo,
 		Coche* carro, string telefonoMovil,
 		int areaVenta, double porcentajeComisiones);
 	~Vendedor();
 	Coche* getCarro();
+	string getTelefonoMovil() { return this->telefonoMovil; }
+	int getAreaVenta() { return this->areaVenta; }
+	double getPorcentajeComisiones() { return this->porcentajeComisiones; }
+
 	void cambiarCoche(Coche* carro);
 	void agregarCliente(Cliente* aCliente);
 	void eliminarCliente(string dni);

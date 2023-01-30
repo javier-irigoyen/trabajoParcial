@@ -5,7 +5,6 @@ class Secretario : public Empleado
 private:
 	int puesto;
 	string num_fax;
-	double bonoAnual;
 
 public:
 	static const int DIRECCION = 1;
@@ -14,7 +13,7 @@ public:
 	static const int NINGUNA = 0;
 
 	Secretario();
-	Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
+	Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, int aniosLaboral, char tipo,
 		int puesto, string num_fax);
 	~Secretario();
 

@@ -1,5 +1,11 @@
 #include "Persona.h"
-Persona::Persona() {}
+Persona::Persona() {
+	this->nombre = "";
+	this->apellidos = "";
+	this->dni = "";
+	this->direccion = "";
+	this->telefono = "";
+}
 Persona::Persona(string nombre, string apellidos, string dni, string direccion, string telefono) {
 	this->nombre = nombre;
 	this->apellidos = apellidos;

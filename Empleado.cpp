@@ -1,37 +1,43 @@
 #include "Empleado.h"
-#include <math.h>
-//Empleado::Empleado() : Persona(){
-//}
-Empleado::Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario)
+Empleado::Empleado() : Persona() {}
+Empleado::~Empleado() {}
+Empleado::Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo)
 	: Persona(nombre, apellidos, dni, direccion, telefono) {
-	if (aniosLaboral >= 0 && aniosLaboral <= 70)
-	{
-		this->aniosLaboral = aniosLaboral;
-	}
-	else {
-		cout << "Error: Los anios laborales ingresados no son validos. Se le asignara 0 anio laboral.";
-		this->aniosLaboral = 0;
-	}
-	if (salario >= 1000)
+	if (salario >= 12000)
 	{
 		this->salario = salario;
 	}
+
 	else {
-		cout << "Error: El salario ingresado no es menor al sueldo minimo. Se le asignara el sueldo minimo (1000)";
-		this->salario = 1000;
+		cout << "Error: El salario ingresado es menor al sueldo minimo anual. Se le asignara el sueldo minimo anual (12000)\n";
+		this->salario = 12000;
+	}
+
+	if (tipo == Empleado::SECRETARIO ||
+		tipo == Empleado::VENDEDOR ||
+		tipo == Empleado::JEFE_ZONA)
+	{
+		this->tipo = tipo;
 	}
 }
+char Empleado::getTipo() { return this->tipo; }
 
 double Empleado::calcularSalario() {
-	return nSalario = this->salario * pow(1 + this->bonoAnual / 100, this->aniosLaboral);
+	double s = this->salario;
+	if (this->tipo == SECRETARIO)
+		return s *= 1.05;
+	if (this->tipo == VENDEDOR)
+		return s *= 1.1;
+	if (this->tipo == JEFE_ZONA)
+		return s *= 1.2;
 }
-void Empleado::imprimir(){
-	cout << "Nombre:\t\t\t" << this->nombre << endl;
-	cout << "Apellidos:\t\t" << this->apellidos << endl;
-	cout << "DNI:\t\t\t" << this->dni << endl;
-	cout << "Direccion:\t\t" << this->direccion << endl;
-	cout << "Telefono:\t\t" << this->telefono << endl;
-	cout << "Anios Laboral:\t\t" << this->aniosLaboral << endl;
-	cout << "Salario Inicial:\t" << this->salario << endl;
-	cout << "Salario Actual:\t\t" << this->calcularSalario() << endl;
+
+void Empleado::imprimir() {
+	cout << "Nombre(s):                   \t" << this->nombre << endl;
+	cout << "Apellido(s):                 \t" << this->apellidos << endl;
+	cout << "DNI:                         \t" << this->dni << endl;
+	cout << "Direccion:                   \t" << this->direccion << endl;
+	cout << "Telefono:                    \t" << this->telefono << endl;
+	cout << "Salario Anual Inicial:    \tS/." << this->salario << endl;
+	cout << "Salario Anual Con Bonus:  \tS/." << calcularSalario() << endl;
 }

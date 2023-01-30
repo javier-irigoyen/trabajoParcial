@@ -22,5 +22,6 @@ public:
 	string getMatricula();
 	string getMarca();
 	string getModelo();
-};
 
+	virtual void mostrar();
+};

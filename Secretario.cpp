@@ -1,18 +1,15 @@
 #include "Secretario.h"
 
 Secretario::Secretario() {
-	//this->datos personales
 	this->puesto = Secretario::NINGUNA;
 	this->num_fax = "";
 }
-Secretario::Secretario(string nombre, string apellidos,
-	string dni, string direccion,
-	string telefono, double salario, int aniosLaboral,
+Secretario::Secretario(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo,
 	int puesto, string num_fax) : Empleado(nombre, apellidos, dni,
-		direccion, telefono, aniosLaboral, salario)  {
+		direccion, telefono, salario, tipo) {
 	this->puesto = puesto;
 	this->num_fax = num_fax;
-	this->bonoAnual = 5;
+
 	if (puesto == Secretario::DIRECCION || puesto == Secretario::ALTA_DIRECCION
 		|| puesto == Secretario::GERENCIA) {
 		this->puesto = puesto;
@@ -21,24 +18,23 @@ Secretario::Secretario(string nombre, string apellidos,
 		cout << "Error: Puesto no valido. El puesto se establecera como NINGUNA." << endl;
 		this->puesto = Secretario::NINGUNA;
 	}
-
 }
-Secretario::~Secretario(){}
-int Secretario::getPuesto(){
+Secretario::~Secretario() {}
+int Secretario::getPuesto() {
 	return this->puesto;
 }
-string Secretario::getNum_fax(){
+string Secretario::getNum_fax() {
 	return this->num_fax;
 }
 void Secretario::imprimir() {
 	cout << endl;
-	cout << " Secretario " << endl;
-	cout << "=================" << endl;
+	cout << " Secretario" << endl;
+	cout << "===========================================================" << endl;
 	Empleado::imprimir();
-	cout << "Numero de Fax:\t" << this->num_fax << endl;
-	cout << "Puesto:\t";
+	cout << "Numero de Fax:               \t" << this->num_fax << endl;
+	cout << "Puesto:                      \t";
 	switch (this->puesto) {
-	case Secretario::DIRECCION: cout << "Secretario de direccion" << endl;
+	case Secretario::DIRECCION: cout << "Secretario de Direccion" << endl;
 		break;
 	case Secretario::ALTA_DIRECCION: cout << "Secretario de alta direccion" << endl;
 		break;

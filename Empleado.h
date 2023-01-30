@@ -4,12 +4,15 @@ class Empleado : public Persona
 {
 protected:
 	double salario;
-	double nSalario;
-	double bonoAnual;
-	int aniosLaboral;
+	char tipo;
 public:
+	static const char SECRETARIO = 'a';
+	static const char VENDEDOR = 'b';
+	static const char JEFE_ZONA = 'c';
 	Empleado();
-	Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, int aniosLaboral, double salario);
-	double calcularSalario();
+	Empleado(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, char tipo);
+	~Empleado();
+	char getTipo();
+	virtual double calcularSalario();
 	virtual void imprimir();
 };

@@ -8,21 +8,21 @@ class JefeDeZona : public Empleado
 {
 private:
 	bool despacho;
-	//Secretario* secretario;
+	Secretario* secretario;
 	Coche* carro;
-	Vendedor** vendedores;
+	Vendedor* vendedor;
 public:
 	JefeDeZona();
 	JefeDeZona(string nombre, string apellidos,
 		string dni, string direccion,
-		string telefono, double salario, int aniosLaboral,
-		bool despacho, Secretario* secretario, Coche* carro, Vendedor** vendedores);
+		string telefono, double salario, char tipo,
+		bool despacho, Secretario* secretario, Coche* carro, Vendedor* vendedor);
 	~JefeDeZona();
-
-	void cambiarSecretario();
-	void cambiarCoche();
+	Coche* getCarro();
+	Secretario* getSecretario();
+	void cambiarSecretario(Secretario* secretario);
+	void cambiarCarro(Coche* carro);
 	void agregarVendedor(Vendedor* vendedor);
 	void eliminarVendedor(string dni);
 	void imprimir();
 };
-

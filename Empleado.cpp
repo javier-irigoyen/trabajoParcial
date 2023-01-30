@@ -12,21 +12,17 @@ Empleado::Empleado(string nombre, string apellidos, string dni, string direccion
 	: Persona(nombre, apellidos, dni, direccion, telefono) {
 	this->bonoAnual = 0;
 	this->nSalario = 0;
-	if (aniosLaboral >= 0 && aniosLaboral <= 70)
-	{
+
 		this->aniosLaboral = aniosLaboral;
-	}
-	else {
-		cout << "Error: Los anios laborales ingresados no son validos. Se le asignara 0 anio laboral.";
-		this->aniosLaboral = 0;
-	}
+
+
 
 	if (salario >= 1000)
 	{
 		this->salario = salario;
 	}
 	else {
-		cout << "Error: El salario ingresado no es menor al sueldo minimo. Se le asignara el sueldo minimo (1000)";
+		cout << "Error: El salario ingresado no es mayor al sueldo minimo. Se le asignara el sueldo minimo (1000)" << endl;
 		this->salario = 1000;
 	}
 
@@ -35,6 +31,10 @@ Empleado::Empleado(string nombre, string apellidos, string dni, string direccion
 		tipo == Empleado::JEFE_ZONA)
 	{
 		this->tipo = tipo;
+	}
+	else {
+		this->tipo = NULL;
+		return;
 	}
 }
 

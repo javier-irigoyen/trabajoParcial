@@ -55,13 +55,13 @@ vector<Secretario*> secretarios{ secretario1 , secretario2, secretario3, secreta
 secretario6,secretario7 };
 
 //Lista Vendedores
-Vendedor* vendedor1 = new Vendedor("Javier", "Irigoyen Matos", "4800271", "Av. Benavides 560", "4432345", 1200, 2, 'b', carro1, "993994620", 1, 5);
-Vendedor* vendedor2 = new Vendedor("Daniel", "Roth", "4356343", "Av. rq 525", "3456425", 1200, 2, 'b', carro2, "993994621", 2, 4);
-Vendedor* vendedor3 = new Vendedor("Francisco", "Green", "5426843", "Av. gs 567", "4567424", 1200, 2, 'b', carro3, "993994622", 3, 2);
-Vendedor* vendedor4 = new Vendedor("Shirley", "Frey", "3781954", "Av. hd 356", "1111111", 1200, 2, 'b', carro4, "993994623", 4, 0);
+Vendedor* vendedor1 = new Vendedor("Javier", "Irigoyen Matos", "4800271", "Av. Benavides 560", "4432345", 20000, 2, 'b', carro1, "993994620", 1, 5);
+Vendedor* vendedor2 = new Vendedor("Daniel", "Roth", "4356343", "Av. rq 525", "3456425", 1400, 3, 'b', carro2, "993994621", 2, 4);
+Vendedor* vendedor3 = new Vendedor("Francisco", "Green", "5426843", "Av. gs 567", "4567424", 1200, 4, 'b', carro3, "993994622", 3, 2);
+Vendedor* vendedor4 = new Vendedor("Shirley", "Frey", "3781954", "Av. hd 356", "1111111", 1200, 3, 'b', carro4, "993994623", 4, 0);
 Vendedor* vendedor5 = new Vendedor("Lorena", "Cain", "7891056", "Av. sh 853", "2222222", 1200, 2, 'b', carro5, "993994624", 1, 1);
-Vendedor* vendedor6 = new Vendedor("Abbie", "Monroe", "2415789", "Av. wr 145", "3333333", 1200, 2, 'b', carro6, "993994625", 4, 2);
-Vendedor* vendedor7 = new Vendedor("Kierra ", "Austin", "1357903", "Av. ut 986", "4444444", 1200, 2, 'b', carro7, "993994626", 5, 3);
+Vendedor* vendedor6 = new Vendedor("Abbie", "Monroe", "2415789", "Av. wr 145", "3333333", 1200, 1, 'b', carro6, "993994625", 4, 2);
+Vendedor* vendedor7 = new Vendedor("Kierra ", "Austin", "1357903", "Av. ut 986", "4444444", 1200, 3, 'b', carro7, "993994626", 5, 3);
 vector<Vendedor*> vendedores{ vendedor1 , vendedor2, vendedor3, vendedor4, vendedor5,
 vendedor6,vendedor7 };
 

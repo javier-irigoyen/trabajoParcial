@@ -25,6 +25,7 @@ vector<Empleado*> empleados;
 Cliente* client1 = new Cliente("Monopolio", "Richmann", "00998811", "av.La molina 1111", "97544319");
 Cliente* client2 = new Cliente("Jnohnyy Javier", "Test", "45001389", "av.Michael GRAU 123", "3034532");
 Cliente* client3 = new Cliente("Henry", "Spencer Friend", "94782314", "jr.Ese de ahi 007", "3234532");
+Cliente* client4 = new Cliente("Sandra", "Spencer Friend", "94782315", "jr.Ese de ahi 007", "3234532");
 vector<Cliente*> clientes { client1, client2, client3};
 
 //Lista Carros
@@ -64,6 +65,7 @@ Vendedor* vendedor6 = new Vendedor("Abbie", "Monroe", "2415789", "Av. wr 145", "
 Vendedor* vendedor7 = new Vendedor("Kierra ", "Austin", "1357903", "Av. ut 986", "4444444", 1200, 2, 'b', carro7, "993994626", 5, 3);
 vector<Vendedor*> vendedores{ vendedor1 , vendedor2, vendedor3, vendedor4, vendedor5,
 vendedor6,vendedor7 };
+
 
 //Lista Jefes
 JefeDeZona* jefe1 = new JefeDeZona("Kristopher Pepito", "Nuñez Tejada", "1340455", "Calle Las Golondrinas 123", "44185141", 500000, 'c', 2, true, secretario1, carro11);
@@ -185,8 +187,17 @@ Empleado* leerEmpleado() {
 	cin >> tipo;
 	tipo = tolower(tipo);
 	if (tipo == 'a') {
-		cout << "Ingrese Salario Anual del Secretario:\n";
-		cin >> salario;
+		do
+		{
+			cout << "Ingrese los anios laborales del Secretario:";
+			cin >> aniosLaboral;
+		} while (!(aniosLaboral >= 0 && aniosLaboral <= 70));
+		do
+		{
+			cout << "Ingrese Salario Anual del Secretario:\n";
+			cin >> salario;
+		} while (!(salario >= 1000));
+
 		cout << "Ingrese Puesto del Secretario:\n";
 		cout << "1. DIRECCION\t 2. ALTA_DIRECCION\t 3. GERENCIA";
 		cin >> puesto;
@@ -196,8 +207,17 @@ Empleado* leerEmpleado() {
 		return new Secretario(nombre, apellidos, dni, direccion, telefono, salario, aniosLaboral, tipo, puesto, num_fax);
 	}
 	if (tipo == 'b') {
-		cout << "Ingrese Salario Anual del Vendedor:\n";
-		cin >> salario;
+		do
+		{
+			cout << "Ingrese los anios laborales del Vendedor:";
+			cin >> aniosLaboral;
+		} while (!(aniosLaboral >= 0 && aniosLaboral <= 70));
+		do
+		{
+			cout << "Ingrese Salario Anual del Vendedor:\n";
+			cin >> salario;
+		} while (!(salario >= 1000));
+		
 
 		string m;
 		cout << "Listado de Carros:" << endl;
@@ -233,7 +253,16 @@ Empleado* leerEmpleado() {
 		if (z == 'y')
 			despacho = true;
 		else despacho = false;
-
+		do
+		{
+			cout << "Ingrese los anios laborales del Jefe de zona:";
+			cin >> aniosLaboral;
+		} while (!(aniosLaboral >= 0 && aniosLaboral <= 70));
+		do
+		{
+			cout << "Ingrese Salario Anual del Jefe de zona:\n";
+			cin >> salario;
+		} while (!(salario >= 1000));
 		string d;
 		cout << "Ingrese el DNI del Secretario que quiere asignar: " << endl;
 		cin >> d;
@@ -449,6 +478,27 @@ int main()
 	empleados.push_back(secretario7);
 	empleados.push_back(jefe1);
 	empleados.push_back(jefe2);
+
+	vendedor1->cambiarCoche(carro8);
+	vendedor1->agregarCliente(client1);
+	vendedor1->agregarCliente(client3);
+	vendedor1->agregarCliente(client4);
+	vendedor1->agregarCliente(client2);
+	vendedor1->eliminarCliente("45001389");
+
+	jefe1->agregarVendedor(vendedor2);
+	jefe1->agregarVendedor(vendedor4);
+
+	jefe2->agregarVendedor(vendedor1);
+	jefe2->agregarVendedor(vendedor3);
+	jefe2->agregarVendedor(vendedor7);
+
+
+
+	jefe2->eliminarVendedor("5426843");
+
+	jefe1->cambiarCarro(carro9);
+	jefe1->cambiarSecretario(secretario1);
 
 	int opcion;
 	do {

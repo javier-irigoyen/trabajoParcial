@@ -11,7 +11,7 @@ Vendedor::Vendedor() : Empleado() {
 Vendedor::Vendedor(string nombre, string apellidos, string dni, string direccion, string telefono, double salario, int aniosLaboral, char tipo,
 	Coche* carro, string telefonoMovil,
 	int areaVenta, double porcentajeComisiones) : Empleado(nombre, apellidos, dni,
-		direccion, telefono, salario, aniosLaboral, tipo) {
+		direccion, telefono, aniosLaboral, salario, tipo) {
 	this->telefonoMovil = telefonoMovil;
 	this->bonoAnual = 10;
 	this->numeroClientes = 0;

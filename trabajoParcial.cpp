@@ -28,18 +28,18 @@ Cliente* client3 = new Cliente("Henry", "Spencer Friend", "94782314", "jr.Ese de
 vector<Cliente*> clientes { client1, client2, client3};
 
 //Lista Carros
-Coche* carro1 = new Coche("AXB358", "Honda", "Civic");
-Coche* carro2 = new Coche("QWE314", "Toyota", "Corolla");
-Coche* carro3 = new Coche("AFE324", "Nissan", "Versa");
-Coche* carro4 = new Coche("FDW324", "Audi", "A3 Sedan");
-Coche* carro5 = new Coche("GDW134", "BMW", "X3");
-Coche* carro6 = new Coche("CDA245", "Chevrolet", "Sedan");
-Coche* carro7 = new Coche("AXB359", "Honda", "Civic");
-Coche* carro8 = new Coche("QWE315", "Toyota", "Corolla");
-Coche* carro9 = new Coche("AFE326", "Nissan", "Versa");
-Coche* carro10 = new Coche("FDW325", "Audi", "A3 Sedan");
-Coche* carro11 = new Coche("GDW135", "BMW", "X3");
-Coche* carro12 = new Coche("CDA246", "Chevrolet", "Sedan");
+Coche* carro1 = new Coche("AXB358", "Honda", "Civic", true);
+Coche* carro2 = new Coche("QWE314", "Toyota", "Corolla", true);
+Coche* carro3 = new Coche("AFE324", "Nissan", "Versa", true);
+Coche* carro4 = new Coche("FDW324", "Audi", "A3 Sedan", true);
+Coche* carro5 = new Coche("GDW134", "BMW", "X3", true);
+Coche* carro6 = new Coche("CDA245", "Cherolet", "Sedan", true);
+Coche* carro7 = new Coche("AXB359", "Honda", "Civic", true);
+Coche* carro8 = new Coche("QWE315", "Toyota", "Corolla", false);
+Coche* carro9 = new Coche("AFE326", "Nissan", "Versa", false);
+Coche* carro10 = new Coche("FDW325", "Audi", "A3 Sedan", false);
+Coche* carro11 = new Coche("GDW135", "BMW", "X3", true);
+Coche* carro12 = new Coche("CDA246", "Cherolet", "Sedan", true);
 vector<Coche*> carros{ carro1 , carro2, carro3, carro4, carro5,
 carro6,carro7, carro8, carro9, carro10, carro11, carro12 };
 
@@ -66,7 +66,7 @@ vector<Vendedor*> vendedores{ vendedor1 , vendedor2, vendedor3, vendedor4, vende
 vendedor6,vendedor7 };
 
 //Lista Jefes
-JefeDeZona* jefe1 = new JefeDeZona("Kristopher Pepito", "Nuñez Tejada", "1340455", "Calle Las Golondrinas 123", "44185141", 500000, 'c', 2, true, secretario1, carro11);
+JefeDeZona* jefe1 = new JefeDeZona("Kristopher Pepito", "NuÃ±ez Tejada", "1340455", "Calle Las Golondrinas 123", "44185141", 500000, 'c', 2, true, secretario1, carro11);
 JefeDeZona* jefe2 = new JefeDeZona("Fletcher Thomas", "Atkinson Tejada", "2233505", "Calle Las Golondrinas 123", "44185141", 500000, 'c', 2, true, secretario2, carro12);
 vector<JefeDeZona*> jefes{ jefe1 , jefe2, };
 
@@ -140,10 +140,12 @@ Vendedor* leerVendedor() {
 	cin >> m;
 	for (int i = 0; i < carros.size(); i++)
 	{
-		if (carros[i]->getMatricula() == m)
+		if (carros[i]->getMatricula() == m && carros[i]->getAsignado() == false)
 		{
 			carro = carros[i];
+			carro[i].setAsignado(true);
 		}
+		else cout << "\nCarro esta Tomado, se le asignara un DEFAULT\n"; carro = new Coche(); break;
 	}
 	cout << "Ingrese Telefono Movil del Vendedor:\n";
 	cin >> telefonoMovil;
@@ -205,10 +207,12 @@ Empleado* leerEmpleado() {
 		cin >> m;
 		for (int i = 0; i < carros.size(); i++)
 		{
-			if (carros[i]->getMatricula() == m)
+			if (carros[i]->getMatricula() == m && carros[i]->getAsignado() == false)
 			{
 				carro = carros[i];
+				carro[i].setAsignado(true);
 			}
+			else cout << "\nCarro esta Tomado, se le asignara un DEFAULT\n"; carro = new Coche(); break;
 		}
 		cout << "Ingrese Telefono Movil del Vendedor:\n";
 		cin >> telefonoMovil;
@@ -322,11 +326,12 @@ void opercaciones() {
 						cin >> m;
 						for (int j = 0; j < carros.size(); j++)
 						{
-							if (carros[j]->getMatricula() == m)
+							if (carros[i]->getMatricula() == m && carros[i]->getAsignado() == false)
 							{
-								carro = carros[j];
-								vendedores[i]->cambiarCoche(carro);
+								carro = carros[i];
+								carro[i].setAsignado(true);
 							}
+							else cout << "\nCarro esta Tomado, no habra cambios\n"; break;
 						}
 						cout << "Su nuevo carro es: " << endl;
 						carro = vendedores[i]->getCarro();
@@ -386,11 +391,13 @@ void opercaciones() {
 						cin >> m;
 						for (int j = 0; j < carros.size(); j++)
 						{
-							if (carros[j]->getMatricula() == m)
+							if (carros[j]->getMatricula() == m && carros[j]->getAsignado() == false)
 							{
 								carro = carros[j];
 								jefes[i]->cambiarCarro(carros[j]);
-							}
+								carro[i].setAsignado(true);
+							} 
+							else cout << "\nCarro esta Tomado, no habra cambios\n"; break;
 						}
 						cout << "\nSu nuevo Carro es: " << endl;
 						carro = jefes[i]->getCarro();
